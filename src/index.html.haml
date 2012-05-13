@@ -1,0 +1,73 @@
+!!!
+%html
+  %head
+    %title Sergey Varaksin - Ruby on Rails Developer
+    %link{:href => "public/style.css", :rel => :stylesheet, :type => 'text/css'}
+    %link{:href => "public/print.css", :media => :print, :rel => :stylesheet, :type => 'text/css'}
+  %body
+    #wrapper
+      #header.clearfix
+        .left
+          .name Sergey Varaksin
+          .profession Ruby on Rails Developer
+        .details.right
+          %p.email
+            %a{:href => "mailto:#{@data.email}"}= @data.email
+          %p.phone
+            %phone= @data.phone
+          %br
+          %p.social
+            %a{:target => "_blank", :href => @data.linkedin, :title => "Linkedin"}
+              %image{:src => "public/images/linkedin_32.png"}
+            %a{:target => "_blank", :href => @data.github, :title => "Github"}
+              %image{:src => "public/images/github_32.png"}
+      #content
+        .block
+          .header Summary
+          .content
+            = Markdown.new(@data.summary, :smart).to_html
+        
+        #skills.block
+          .header Skills
+          .content
+            - @data.skills.each do |skill|
+              .header
+                .title= skill.category
+              .description
+                = Markdown.new(skill.items, :smart).to_html
+        
+        #companies.block
+          .header Work Experience
+          .content
+            - @data.companies.each do |company|
+              .header
+                .title.left
+                  - if company.url
+                    %a{:href => company.url, :target => "_blank"}= company.name
+                  - else
+                    = company.name
+                .position.left
+                  #{company.position}
+                .period.right
+                  .dates.right
+                    = company.date_start.strftime("%m/%Y")
+                    \-
+                    - if company.date_end == Date.today
+                      Today
+                    - else
+                      = company.date_end.strftime("%m/%Y")
+                  .total.right
+                    -# (#{((company.date_end - company.date_start) / 30).round} months)
+                    (#{time_between_in_months company.date_start, company.date_end})
+                .clear
+              .description
+                = Markdown.new(company.description.to_s, :smart).to_html
+        
+        .block
+          .header Education
+          .content
+            = Markdown.new(@data.education, :smart).to_html
+      #footer
+        .right
+          %a.pdf_link{:href => "resume.pdf"} Download in PDF
+        .clear

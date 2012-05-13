@@ -1,0 +1,112 @@
+email: varaksin86@gmail.com
+phone: +1 (312) 823-6093
+github: http://github.com/sav86
+linkedin: http://www.linkedin.com/pub/sergey-varaksin/21/9b0/3a7
+
+summary: |
+  - Ruby on Rails back-end and front-end developer
+  - About 5 years of experience in web development
+  - Always staying up to date with all modern technologies
+  - I do care about details, and trying to keep things simple
+
+skills:
+  - category: Ruby
+    items: |
+      - **Rails**
+      - Sinatra
+      - **RSpec**
+      - Cucumber
+      - **Haml / Sass / Coffescript**
+      - Sphinx
+  - category: Javascript
+    items: |
+      - **jQuery**
+      - Prototype
+      - Dojo
+      - YUI
+      - Mootools
+  - category: Databases
+    items: |
+      - MySQL
+      - **PostgreSQL**
+      - **MongoDB**
+  - category: Deployment
+    :items: |
+      - **Capistrano**
+      - **Nginx + Unicorn**
+  - category: Preferred Tools
+    items: |
+      - **MacOS**
+      - **Vim**
+      - **Git**
+      - **Bash**
+
+companies:
+  - name: Sphere Consulting Inc.
+    url: http://sphereinc.com/
+    date_start: 04/2011
+    date_end: Today
+    position: Ruby on Rails Developer
+    description: |
+      - <http://cadreas.com/>
+        * backend and frontend development
+        * code refactoring
+        * production environment setup
+        * data migration from old database
+        * fulltext search using sphinx
+      - <http://poundstopocket.co.uk/>
+        * acceptance tests
+      - <http://prettyquickbeauty.com/>
+        * code refactoring
+      - <http://styleup.ru/>
+      - <http://medicup.ru/>
+  
+  - name: The Queue Inc.
+    url: http://thequeue.net/
+    date_start: 11/2010
+    date_end: 02/2011
+    position: Ruby on Rails Developer
+    description: |
+      - <http://meatspacemarketing.com/>
+      - <http://talicor.com/>
+      - <http://urlagg.com/>
+      
+      Also worked on some private projects.
+  
+  - name: Freelance
+    date_start: 03/2009
+    date_end: 04/2011
+    position: Ruby on Rails Developer
+    description: |
+      Few projects I had worked on:
+        
+        - <http://chictini.com/>
+        - <http://cricketfantasies.com/>
+        - <http://wisepatient.com/>
+  
+  - name: Sibers
+    url: http://sibers.com/
+    date_start: 08/2008
+    date_end: 03/2009
+    position: PHP Developer
+    description: |
+      Worked on many projects using these technologies:
+        
+        - Zend Framework, Symfony
+        - Mysql, Lucene
+        - JQuery, Dojo
+  
+  - name: New Siberia LLC
+    date_start: 09/2006
+    date_end: 06/2008
+    position: PHP Developer,<br/> Web Server Administrator
+    description: |
+      - created custom CRM using PHP (rewrote it using Pylons eventually)
+      - local server administration
+
+education: |
+  NSAWT, Novosibirsk, Russia
+  
+  MS, Computer Science
+  
+  2003 - 2008
