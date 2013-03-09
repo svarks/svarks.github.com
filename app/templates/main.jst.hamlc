@@ -1,0 +1,40 @@
+#header.clearfix
+  .left
+    .name Sergey Varaksin
+    .profession Ruby on Rails Developer
+  .details.right
+    %p.email
+      %a{href: "mailto:#{@data.email}"}
+        = @data.email
+    %p.phone
+      %phone= @data.phone
+    %br
+    %p.social
+      %a{target: '_blank', href: @data.linkedin, title: "Linkedin"}
+        %image{src: "public/images/linkedin_32.png"}
+      %a{target: "_blank", href: @data.github, title: "Github"}
+        %image{src: "public/images/github_32.png"}
+
+#content
+  .block
+    .header Summary
+    .content
+      != @markdown @data.summary
+
+  #skills.block
+    .header Skills
+    .content
+      - for category in @data.skills
+        != JST['templates/skills'](category)
+
+  #companies.block
+    .header Work Experience
+    .content
+      - for company in @data.companies
+        != JST['templates/company'](company)
+
+  .block
+    .header Education
+    .content
+      != @markdown @data.education
+#footer

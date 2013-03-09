@@ -1,0 +1,22 @@
+.header
+  .title.left
+    - if @url
+      %a{href: @url, target: '_blank'}
+        = @name
+    - else
+      = @name
+  .position.left
+    != @position
+  .period.right
+    .dates.right
+      = @format_date @date_start
+      \-
+      - if @date_end == 'Today'
+        Today
+      - else
+        = @format_date @date_end
+    .total.right
+      (#{@time_between @date_start, @date_end})
+  .clear
+.description
+  != @markdown @description

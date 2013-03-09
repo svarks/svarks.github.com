@@ -1,5 +1,5 @@
 guard 'shell' do
-  watch(%r{data.yml})     { `rake generate_html` }
-  watch(%r{src/.*\.haml}) { `rake generate_html` }
-  watch(%r{src/.*\.sass}) { `rake generate_css` }
+  watch(%r{data.yml})                    { `rake compile:haml` }
+  watch(%r{app/.*\.haml})                { `rake compile:haml` }
+  watch(%r{app/.*\.(coffee|sass|hamlc)}) { `rake compile:sprockets` }
 end

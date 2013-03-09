@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title Sergey Varaksin - Ruby on Rails Developer
+    %link{rel: :stylesheet, type: 'text/css', href: "compiled/style.css"}
+
+    %script{type: 'text/javascript', src: 'compiled/vendor.js'}
+    %script{type: 'text/javascript', src: 'compiled/app.js'}
+    :javascript
+      App.data = #{@data.to_json}
+  %body
+    #wrapper

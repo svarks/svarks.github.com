@@ -19,16 +19,10 @@ body {
   width: 900px;
   margin: 0 auto;
   font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  background: #eeeeee; }
+  line-height: 1.5; }
 
 #wrapper {
-  background: white;
-  padding: 0 20px;
-  box-shadow: 0 0 10px #aaaaaa;
-  -moz-box-shadow: 0 0 10px #aaaaaa;
-  -ms-box-shadow: 0 0 10px #aaaaaa;
-  -webkit-box-shadow: 0 0 10px #aaaaaa; }
+  padding: 0 20px; }
 
 #header {
   padding-top: 10px; }
@@ -57,25 +51,24 @@ ul {
   margin-bottom: 5px; }
 
 .block {
-  margin: 20px 0;
-  padding-top: 10px;
-  border-top: 3px double #aaaaaa; }
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 3px dashed #cccccc; }
   .block > .header {
     font-size: 1.2em;
     font-weight: bold;
     width: 200px;
-    float: left;
-    text-shadow: 1px 1px #dddddd; }
+    float: left; }
   .block > .content {
     float: left;
     width: 660px; }
     .block > .content > .header {
-      background: #f5f5f5;
+      background: whitesmoke;
       border: 1px solid #dddddd;
-      border-radius: 6px;
-      -moz-border-radius: 6px;
-      -ms-border-radius: 6px;
-      -webkit-border-radius: 6px;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -webkit-border-radius: 2px;
       background: #eeeeee;
       background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
       background: -moz-linear-gradient(top, white, #eeeeee);
