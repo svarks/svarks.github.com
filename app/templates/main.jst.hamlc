@@ -11,9 +11,9 @@
     %br
     %p.social
       %a{target: '_blank', href: @data.linkedin, title: "Linkedin"}
-        %image{src: "public/images/linkedin_32.png"}
+        %image{src: "assets/images/linkedin_32.png"}
       %a{target: "_blank", href: @data.github, title: "Github"}
-        %image{src: "public/images/github_32.png"}
+        %image{src: "assets/images/github_32.png"}
 
 #content
   .block

@@ -1,6 +1,6 @@
 email: varaksin86@gmail.com
 phone: +1 (312) 823-6093
-github: http://github.com/sav86
+github: http://github.com/svarks
 linkedin: http://www.linkedin.com/pub/sergey-varaksin/21/9b0/3a7
 
 summary: |
@@ -20,6 +20,7 @@ skills:
     items: |
       - **jQuery**
       - **Backbone.js**
+      - Angular.js
       - Prototype
       - Dojo
       - YUI
@@ -42,10 +43,22 @@ skills:
       - **Zsh + Tmux**
 
 companies:
+  - name: Remind101
+    url: https://www.remind101.com/
+    date_start: 08/08/2013
+    date_end: Today
+    position: Web Engineer
+    description: |
+      Full stack web engeneer:
+
+      * Rails / Sinatra
+      * PostgreSQL
+      * Angular.js / Coffeescript
+
   - name: Groupon Inc.
     url: http://www.groupon.com/
-    date_start: 11/01/2012
-    date_end: Today
+    date_start: 11/27/2012
+    date_end: 08/06/2013
     position: Ruby on Rails Consultant
     description: |
       Internal web application for sales department.
@@ -56,7 +69,7 @@ companies:
   - name: Sears Holdings Corporation
     url: http://www.searsholdings.com/
     date_start: 02/01/2012
-    date_end: 11/01/2012
+    date_end: 11/26/2012
     position: Ruby on Rails Consultant
     description: |
       <http://kenmoreconnect.com/>
@@ -68,7 +81,7 @@ companies:
   - name: Sphere Consulting Inc.
     url: http://sphereinc.com/
     date_start: 04/01/2011
-    date_end: Today
+    date_end: 08/06/2013
     position: Ruby on Rails Developer
     description: |
       - <http://cadreas.com/>
@@ -122,8 +135,8 @@ companies:
     date_end: 06/01/2008
     position: PHP Developer,<br/> Web Server Administrator
     description: |
-      - inmplementer CRM system from scratch using PHP
-      - web server administration
+      - Implemented CRM system from scratch using PHP
+      - Web server administration
 
 education: |
   NSAWT, Novosibirsk, Russia

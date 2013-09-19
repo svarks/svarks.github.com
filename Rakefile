@@ -12,7 +12,7 @@ namespace :compile do
     output_file = File.expand_path('../index.html', __FILE__)
     engine = Haml::Engine.new File.read(input_file)
 
-    puts "Compiling Haml"
+    puts "Compiling HTML"
 
     File.open(output_file, 'w') do |f|
       @data = YAML.load(File.open("data.yml"))
@@ -21,15 +21,15 @@ namespace :compile do
   end
 
   task :sprockets do
-    puts "Compiling Sprockets"
+    puts "Compiling Assets"
 
     assets = Sprockets::Environment.new
     assets.append_path 'app'
     assets.append_path 'app/stylesheets'
     assets.append_path File.dirname(HamlCoffeeAssets.helpers_path)
 
-    %w(vendor.js app.js style.css).each do |name|
-      assets[name].write_to File.expand_path("../compiled/#{name}", __FILE__)
+    %w(vendor.js app.js app.css).each do |name|
+      assets[name].write_to File.expand_path("../assets/compiled/#{name}", __FILE__)
     end
   end
 end
