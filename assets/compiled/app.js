@@ -75,9 +75,11 @@
       $e = window.HAML.escape;
       $c = window.HAML.cleanValue;
       $o = [];
-      $o.push("<div class='clearfix' id='header'>\n  <div class='left'>\n    <div class='name'>Sergey Varaksin</div>\n    <div class='profession'>Ruby on Rails Developer</div>\n  </div>\n  <div class='details right'>\n    <p class='email'>\n      <a href='mailto:" + ($e($c(this.data.email))) + "'>");
+      $o.push("<div class='clearfix' id='header'>\n  <div class='left'>\n    <div class='name'>Sergey Varaksin</div>\n    <div class='profession'>");
+      $o.push("      " + $e($c(this.data.profession)));
+      $o.push("    </div>\n  </div>\n  <div class='details right'>\n    <p class='email'>\n      <a href='mailto:" + ($e($c(this.data.email))) + "'>");
       $o.push("        " + $e($c(this.data.email)));
-      $o.push("      </a>\n    </p>\n    <p class='phone'>\n      <phone>" + ($e($c(this.data.phone))) + "</phone>\n    </p>\n    <br>\n    <p class='social'>\n      <a target='_blank' href='" + ($e($c(this.data.linkedin))) + "' title='Linkedin'>\n        <image src='assets/images/linkedin_32.png'></image>\n      </a>\n      <a target='_blank' href='" + ($e($c(this.data.github))) + "' title='Github'>\n        <image src='assets/images/github_32.png'></image>\n      </a>\n    </p>\n  </div>\n</div>\n<div id='content'>\n  <div class='block'>\n    <div class='header'>Summary</div>\n    <div class='content'>");
+      $o.push("      </a>\n    </p>\n    <p class='phone'>\n      <phone>" + ($e($c(this.data.phone))) + "</phone>\n    </p>\n    <p class='social'>\n      <a target='_blank' href='" + ($e($c(this.data.linkedin))) + "' title='Linkedin'>\n        <image src='assets/images/linkedin_32.png'></image>\n      </a>\n      <a target='_blank' href='" + ($e($c(this.data.github))) + "' title='Github'>\n        <image src='assets/images/github_32.png'></image>\n      </a>\n    </p>\n  </div>\n</div>\n<div id='content'>\n  <div class='block'>\n    <div class='header'>Summary</div>\n    <div class='content'>");
       $o.push("      " + $c(this.markdown(this.data.summary)));
       $o.push("    </div>\n  </div>\n  <div class='block' id='skills'>\n    <div class='header'>Skills</div>\n    <div class='content'>");
   _ref = this.data.skills;

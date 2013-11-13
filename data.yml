@@ -2,6 +2,7 @@ email: varaksin86@gmail.com
 phone: +1 (312) 823-6093
 github: http://github.com/svarks
 linkedin: http://www.linkedin.com/pub/sergey-varaksin/21/9b0/3a7
+profession: Ruby on Rails Engineer
 
 summary: |
   I have full stack web development experience from writing html and javascript on client side to setting up application deployment process and server administration.
@@ -16,6 +17,7 @@ skills:
       - **RSpec**
       - Cucumber
       - **Haml / Sass / Coffescript**
+      - **Sidekiq**
   - category: Javascript
     items: |
       - **jQuery**
@@ -27,9 +29,10 @@ skills:
       - Mootools
   - category: Databases
     items: |
-      - MySQL
       - **PostgreSQL**
       - **MongoDB**
+      - **Redis**
+      - MySQL
   - category: Deployment
     :items: |
       - **Capistrano**
@@ -37,13 +40,13 @@ skills:
       - Puppet / Chef
   - category: Preferred Tools
     items: |
-      - **MacOS**
+      - **MacOSX**
       - **Vim**
       - **Git**
       - **Zsh + Tmux**
 
 companies:
-  - name: Remind101
+  - name: Remind101 Inc.
     url: https://www.remind101.com/
     date_start: 08/08/2013
     date_end: Today
@@ -65,6 +68,7 @@ companies:
 
       * Backbone.js on frontend side
       * Back end API that integrates with internal CRM
+      * ETL data processes
 
   - name: Sears Holdings Corporation
     url: http://www.searsholdings.com/
@@ -74,9 +78,9 @@ companies:
     description: |
       <http://kenmoreconnect.com/>
 
-      * I had taken lead developer role on new project about post-purchase experience for store customers.
+      * I had taken a lead developer role on new project providing post-purchase experience for retail store customers.
       * Rich client interface that fully degrades to iPhone screen.
-      * Backend data import and processing.
+      * Large data import and processing.
 
   - name: Sphere Consulting Inc.
     url: http://sphereinc.com/

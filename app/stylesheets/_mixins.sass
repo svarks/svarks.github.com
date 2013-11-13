@@ -15,3 +15,16 @@
   background: -webkit-gradient(linear, left top, left bottom, from($first), to($second))
   background: -moz-linear-gradient(top,  $first,  $second)
 
+@mixin custom-list
+  list-style: none
+  padding-left: 20px
+  > li
+    &:before
+      content: '•'
+      display: block
+      float: left
+      margin-left: -15px
+  ul
+    li
+      &:before
+        content: '-'

@@ -1,14 +1,7 @@
 @import mixins
 @import support
 @import layout
-
-p
-  margin: 0
-  margin-bottom: 5px
-ul
-  margin: 0
-  padding-left: 20px
-  margin-bottom: 5px
+@import typography
 
 .block
   margin-top: 30px
@@ -31,8 +24,6 @@ ul
       line-height: 20px
       padding: 10px
       margin-bottom: 10px
-      .title
-        text-shadow: 1px 1px #eee
 
 #skills
   ul
@@ -52,11 +43,10 @@ ul
   .header
     .title
       width: 200px
-      font-weight: bold
     .position
       color: #333
-      font-size: 0.7em
-      font-style: italic
+      font-size: 0.8em
+      font-weight: bold
     .period
       font-size: 0.7em
       .total
@@ -64,3 +54,5 @@ ul
         color: #aaa
   .description
     margin-bottom: 10px
+    ul
+      +custom-list

@@ -1,14 +1,14 @@
 #header.clearfix
   .left
     .name Sergey Varaksin
-    .profession Ruby on Rails Developer
+    .profession
+      = @data.profession
   .details.right
     %p.email
       %a{href: "mailto:#{@data.email}"}
         = @data.email
     %p.phone
       %phone= @data.phone
-    %br
     %p.social
       %a{target: '_blank', href: @data.linkedin, title: "Linkedin"}
         %image{src: "assets/images/linkedin_32.png"}

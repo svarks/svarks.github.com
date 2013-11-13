@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .left {
   float: left; }
 
@@ -41,14 +42,22 @@ body {
 #footer {
   height: 50px; }
 
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
 p {
   margin: 0;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 
 ul {
   margin: 0;
-  padding-left: 20px;
   margin-bottom: 5px; }
+
+a {
+  color: #0099dd;
+  text-decoration: none; }
+  a:hover {
+    color: #00bbff; }
 
 .block {
   margin-top: 30px;
@@ -75,8 +84,6 @@ ul {
       line-height: 20px;
       padding: 10px;
       margin-bottom: 10px; }
-      .block > .content > .header .title {
-        text-shadow: 1px 1px #eeeeee; }
 
 #skills ul {
   list-style: none;
@@ -94,12 +101,11 @@ ul {
     -webkit-border-radius: 6px; }
 
 #companies .header .title {
-  width: 200px;
-  font-weight: bold; }
+  width: 200px; }
 #companies .header .position {
   color: #333333;
-  font-size: 0.7em;
-  font-style: italic; }
+  font-size: 0.8em;
+  font-weight: bold; }
 #companies .header .period {
   font-size: 0.7em; }
   #companies .header .period .total {
@@ -107,3 +113,13 @@ ul {
     color: #aaaaaa; }
 #companies .description {
   margin-bottom: 10px; }
+  #companies .description ul {
+    list-style: none;
+    padding-left: 20px; }
+    #companies .description ul > li:before {
+      content: "•";
+      display: block;
+      float: left;
+      margin-left: -15px; }
+    #companies .description ul ul li:before {
+      content: "-"; }
