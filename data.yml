@@ -1,8 +1,9 @@
+name: Sergey Varaksin
+profession: Ruby on Rails Engineer
 email: varaksin86@gmail.com
 phone: +1 (312) 823-6093
 github: http://github.com/svarks
 linkedin: http://www.linkedin.com/pub/sergey-varaksin/21/9b0/3a7
-profession: Ruby on Rails Engineer
 
 summary: |
   I have full stack web development experience from writing html and javascript on client side to setting up application deployment process and server administration.
@@ -22,6 +23,7 @@ skills:
     items: |
       - **jQuery**
       - **Backbone.js**
+      - D3.js
       - Angular.js
       - Prototype
       - Dojo
@@ -34,7 +36,7 @@ skills:
       - **Redis**
       - MySQL
   - category: Deployment
-    :items: |
+    items: |
       - **Capistrano**
       - **Nginx + Unicorn**
       - Puppet / Chef
@@ -46,10 +48,20 @@ skills:
       - **Zsh + Tmux**
 
 companies:
+  - name: Triggit Inc.
+    url: http://www.triggit.com/
+    date_start: 12/2/2013
+    date_end: 04/11/2014
+    position: Web Engineer
+    description: |
+
+      * Worked on refactoring monolithic rails app into rails API + Angular.js client on frontend
+      * Building cross-browser javascript widget using node.js
+
   - name: Remind101 Inc.
     url: https://www.remind101.com/
     date_start: 08/08/2013
-    date_end: Today
+    date_end: 11/28/2013
     position: Web Engineer
     description: |
       Full stack web engeneer:
@@ -57,6 +69,7 @@ companies:
       * Rails / Sinatra
       * PostgreSQL
       * Angular.js / Coffeescript
+      * Worked on lots of performance optimisations
 
   - name: Groupon Inc.
     url: http://www.groupon.com/
@@ -85,42 +98,22 @@ companies:
   - name: Sphere Consulting Inc.
     url: http://sphereinc.com/
     date_start: 04/01/2011
-    date_end: 08/06/2013
+    date_end: 02/01/2012
     position: Ruby on Rails Developer
     description: |
-      - <http://cadreas.com/>
-        * backend and frontend development
-        * code refactoring
-        * production environment setup
-        * data migration from old database
-        * fulltext search with facets
-      - <http://poundstopocket.co.uk/>
-      - <http://prettyquickbeauty.com/>
-      - <http://styleup.ru/>
-      - <http://medicup.ru/>
+      Worked as consultant on many projects, doing the following:
 
-  - name: The Queue Inc.
-    url: http://thequeue.net/
-    date_start: 11/01/2010
-    date_end: 02/01/2011
-    position: Ruby on Rails Developer
-    description: |
-      - <http://meatspacemarketing.com/>
-      - <http://talicor.com/>
-      - <http://urlagg.com/>
-
-      Also worked on some private projects.
+      * backend and frontend development
+      * code refactoring and optimisation
+      * production environment setup
+      * data migrations
 
   - name: Freelance
     date_start: 03/01/2009
     date_end: 04/01/2011
     position: Ruby on Rails Developer
     description: |
-      Few projects I had worked on:
-
-        - <http://chictini.com/>
-        - <http://cricketfantasies.com/>
-        - <http://wisepatient.com/>
+      I had multiple rails contracts working as a full stack consultant.
 
   - name: Sibers
     url: http://sibers.com/

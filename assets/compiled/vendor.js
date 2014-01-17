@@ -15171,7 +15171,7 @@ else
     HAML.findAndPreserve = function(text) {
       var tags;
       tags = 'textarea,pre'.split(',').join('|');
-      return text = text.replace(/\r/g, '').replace(RegExp("<(" + tags + ")>([\\s\\S]*?)<\\/\\1>", "g"), function(str, tag, content) {
+      return text = text.replace(/\r/g, '').replace(RegExp("<(" + tags + ")>([\\s\\S]*?)</\\1>", "g"), function(str, tag, content) {
         return "<" + tag + ">" + (window.HAML.preserve(content)) + "</" + tag + ">";
       });
     };

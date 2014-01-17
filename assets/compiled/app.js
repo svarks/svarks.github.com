@@ -65,7 +65,7 @@
       $o.push("    </div>\n    <div class='right total'>\n      (" + (this.time_between(this.date_start, this.date_end)) + ")\n    </div>\n  </div>\n  <div class='clear'></div>\n</div>\n<div class='description'>");
       $o.push("  " + $c(this.markdown(this.description)));
       $o.push("</div>");
-      return $o.join("\n").replace(/\s(\w+)='true'/mg, ' $1').replace(/\s(\w+)='false'/mg, '').replace(/\s(?:id|class)=(['"])(\1)/mg, "");
+      return $o.join("\n").replace(/\s([\w-]+)='true'/mg, ' $1').replace(/\s([\w-]+)='false'/mg, '').replace(/\s(?:id|class)=(['"])(\1)/mg, "");
     }).call(window.HAML.context(context));
   });;
 }).call(this);
@@ -96,7 +96,7 @@
       $o.push("    </div>\n  </div>\n  <div class='block'>\n    <div class='header'>Education</div>\n    <div class='content'>");
       $o.push("      " + $c(this.markdown(this.data.education)));
       $o.push("    </div>\n  </div>\n</div>\n<div id='footer'></div>");
-      return $o.join("\n").replace(/\s(\w+)='true'/mg, ' $1').replace(/\s(\w+)='false'/mg, '').replace(/\s(?:id|class)=(['"])(\1)/mg, "");
+      return $o.join("\n").replace(/\s([\w-]+)='true'/mg, ' $1').replace(/\s([\w-]+)='false'/mg, '').replace(/\s(?:id|class)=(['"])(\1)/mg, "");
     }).call(window.HAML.context(context));
   });;
 }).call(this);
@@ -109,21 +109,19 @@
       $o.push("<div class='header'>\n  <div class='title'>" + ($e($c(this.category))) + "</div>\n</div>\n<div class='description'>");
       $o.push("  " + $c(this.markdown(this.items)));
       $o.push("</div>");
-      return $o.join("\n").replace(/\s(\w+)='true'/mg, ' $1').replace(/\s(\w+)='false'/mg, '').replace(/\s(?:id|class)=(['"])(\1)/mg, "");
+      return $o.join("\n").replace(/\s([\w-]+)='true'/mg, ' $1').replace(/\s([\w-]+)='false'/mg, '').replace(/\s(?:id|class)=(['"])(\1)/mg, "");
     }).call(window.HAML.context(context));
   });;
 }).call(this);
 (function() {
-  var _ref,
-    __hasProp = {}.hasOwnProperty,
+  var __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   App.Views.Main = (function(_super) {
     __extends(Main, _super);
 
     function Main() {
-      _ref = Main.__super__.constructor.apply(this, arguments);
-      return _ref;
+      return Main.__super__.constructor.apply(this, arguments);
     }
 
     Main.prototype.template = JST['templates/main'];
