@@ -1,5 +1,5 @@
 name: Sergey Varaksin
-profession: Ruby on Rails Engineer
+position: Ruby on Rails Engineer
 email: varaksin86@gmail.com
 phone: +1 (312) 823-6093
 github: http://github.com/svarks
@@ -50,26 +50,14 @@ skills:
 companies:
   - name: Triggit Inc.
     url: http://www.triggit.com/
-    date_start: 12/2/2013
+    date_start: 08/08/2013
     date_end: 04/11/2014
     position: Web Engineer
     description: |
+      Worked on a rails app as a full stack engineer:
 
       * Worked on refactoring monolithic rails app into rails API + Angular.js client on frontend
       * Building cross-browser javascript widget using node.js
-
-  - name: Remind101 Inc.
-    url: https://www.remind101.com/
-    date_start: 08/08/2013
-    date_end: 11/28/2013
-    position: Web Engineer
-    description: |
-      Full stack web engeneer:
-
-      * Rails / Sinatra
-      * PostgreSQL
-      * Angular.js / Coffeescript
-      * Worked on lots of performance optimisations
 
   - name: Groupon Inc.
     url: http://www.groupon.com/

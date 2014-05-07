@@ -1,0 +1,10 @@
+{
+  "name": "svarks.github.com",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "~1.6.0",
+    "backbone": "~1.1.2",
+    "moment": "~2.6.0",
+    "markdown": "~0.5.0"
+  }
+}

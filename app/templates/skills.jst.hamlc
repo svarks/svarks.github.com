@@ -1,4 +1,0 @@
-.header
-  .title= @category
-.description
-  != @markdown @items

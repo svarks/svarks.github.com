@@ -1,13 +1,8 @@
-# = require_self
-# = require helpers
-# = require_tree ./templates
-# = require_tree ./views
-
-window.App ?= {}
-
-App.Views = {}
+MainView = require './views/main'
+data     = require './data.yml'
 
 $(document).ready ->
-  new App.Views.Main
-    el: '#wrapper'
-  .render()
+  $('title').html [data.name, data.position].join(' - ')
+
+  view = new MainView(el: '#wrapper')
+  view.render(data)

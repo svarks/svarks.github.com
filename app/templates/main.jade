@@ -1,0 +1,36 @@
+#header.clearfix
+  .left
+    .name= data.name
+    .profession
+      = data.position
+  .details.right
+    p.email
+      a(href="mailto:#{data.email}")
+        = data.email
+    p.phone
+      phone= data.phone
+    p.social
+      a(target="_blank" href=data.linkedin title="Linkedin")
+        image(src="images/linkedin_32.png")
+      a(target="_blank" href=data.github title="Github")
+        image(src="images/github_32.png")
+
+#content
+  .block
+    .header Summary
+    .content
+      != h.markdown(data.summary)
+
+  #skills.block
+    .header Skills
+    .content
+
+  #companies.block
+    .header Work Experience
+    .content
+
+  .block
+    .header Education
+    .content
+      != h.markdown(data.education)
+#footer

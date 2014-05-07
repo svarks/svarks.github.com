@@ -1,14 +1,13 @@
-App.Helpers =
+dateFormats = ['MM/DD/YYYY', 'YYYY-MM-DD']
+
+module.exports =
   markdown: (text) ->
-    converter = new Markdown.Converter()
-    converter.makeHtml text
+    markdown.toHTML(text)
 
-  time_between: (start, end) ->
-    if end == 'Today'
-      end = new Date
-    moment(end).from(start, true)
+  timeBetween: (start, end) ->
+    start = moment(start, dateFormats)
+    end = new Date if end == 'Today'
+    moment(end, dateFormats).from(start, true)
 
-  format_date: (date, format = 'MMM YYYY') ->
-    moment(date).format(format)
-
-HAML.globals = -> App.Helpers
+  formatDate: (date, format = 'MMM YYYY') ->
+    moment(date, dateFormats).format(format)
