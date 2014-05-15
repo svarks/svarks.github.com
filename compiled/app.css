@@ -39,6 +39,7 @@ body {
   text-align: right;
 }
 #header .details .social a {
+  font-size: 32px;
   margin-left: 10px;
   float: right;
 }
@@ -61,6 +62,26 @@ a {
 }
 a:hover {
   color: #0bf;
+}
+@font-face {
+  font-family: 'Icofont';
+  src: url("icofont.eot");
+  src: url("icofont.eot?#iefix") format('embedded-opentype'), url("icofont.woff") format('woff'), url("icofont.ttf") format('truetype'), url("icofont.svg#icofont") format('svg');
+}
+.icon {
+  display: inline-block;
+  font-family: Icofont;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon.icon-github:before {
+  content: '\e001';
+}
+.icon.icon-linkedin:before {
+  content: '\e002';
 }
 .block {
   margin-top: 30px;

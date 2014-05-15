@@ -1,0 +1,25 @@
+$icons = {
+  '001': 'github'
+  '002': 'linkedin'
+}
+
+@font-face
+  font-family: 'Icofont'
+  src: url('icofont.eot')
+  src: url('icofont.eot?#iefix') format('embedded-opentype'), \
+       url('icofont.woff') format('woff'), \
+       url('icofont.ttf') format('truetype'), \
+       url('icofont.svg#icofont') format('svg')
+
+.icon
+  display: inline-block
+  font-family: Icofont
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+for key, name in $icons
+  .icon.icon-{name}:before
+    content: "\e" + key

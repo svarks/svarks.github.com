@@ -4,6 +4,7 @@ concat     = require 'gulp-concat'
 stylus     = require 'gulp-stylus'
 jade       = require 'gulp-jade'
 browserify = require 'gulp-browserify'
+iconfont   = require 'gulp-iconfont'
 
 gulp.task 'templates', ->
   gulp.src('app/index.jade')
@@ -13,6 +14,14 @@ gulp.task 'templates', ->
 gulp.task 'styles', ->
   gulp.src('app/styles/app.styl')
     .pipe(stylus(errors: true))
+    .pipe(gulp.dest('compiled'))
+
+gulp.task 'icons', ->
+  gulp.src('icons/*.svg')
+    .pipe(iconfont(
+      fontName: 'icofont'
+      appendCodepoints: true
+    ))
     .pipe(gulp.dest('compiled'))
 
 gulp.task 'scripts:app', ->
@@ -35,4 +44,4 @@ gulp.task 'scripts:vendor', ->
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('compiled'))
 
-gulp.task 'build', ['templates', 'styles', 'scripts:vendor', 'scripts:app']
+gulp.task 'build', ['templates', 'styles', 'icons', 'scripts:vendor', 'scripts:app']
