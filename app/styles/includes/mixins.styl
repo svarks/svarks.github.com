@@ -29,6 +29,23 @@ custom-list()
       &:before
         content: '-'
 
+panel()
+  $header-bg = #f5f5f5
+  $border-color = #ddd
+
+  border: 1px solid $border-color
+  border-radius(4px)
+  overflow: hidden
+  margin-bottom: 20px
+
+  > .header
+    background: $header-bg
+    padding: 10px
+    border-bottom: 1px solid $border-color
+
+  > .content
+    padding: 10px
+
 clearfix()
   &:after
     content: "."

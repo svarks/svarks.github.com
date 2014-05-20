@@ -1,23 +1,24 @@
 each company in companies
-  .header
-    .title.left
-      if company.url
-        a(href=company.url target='_blank')
-          = company.name
-      else
-        = company.name
-    .position.left
-      != company.position
-    .period.right
-      .dates.right
-        = h.formatDate(company.date_start)
-        = ' - '
-        if company.date_end == 'Today'
-          | Today
+  .company
+    .header
+      .title.left
+        if company.url
+          a(href=company.url target='_blank')
+            = company.name
         else
-          = h.formatDate(company.date_end)
-      .total.right
-        | (#{h.timeBetween(company.date_start, company.date_end)})
-    .clear
-  .description
-    != h.markdown(company.description)
+          = company.name
+      .position.left
+        != company.position
+      .period.right
+        .dates.right
+          = h.formatDate(company.date_start)
+          = ' - '
+          if company.date_end == 'Today'
+            | Today
+          else
+            = h.formatDate(company.date_end)
+        .total.right
+          | (#{h.timeBetween(company.date_start, company.date_end)})
+      .clear
+    .content
+      != h.markdown(company.description)

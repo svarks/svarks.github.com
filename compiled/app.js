@@ -58,7 +58,7 @@ var jade_interp;
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var company = $$obj[$index];
 
-buf.push("<div class=\"header\"><div class=\"title left\">");
+buf.push("<div class=\"company\"><div class=\"header\"><div class=\"title left\">");
 if ( company.url)
 {
 buf.push("<a" + (jade.attr("href", company.url, true, false)) + " target=\"_blank\">" + (jade.escape(null == (jade_interp = company.name) ? "" : jade_interp)) + "</a>");
@@ -76,7 +76,7 @@ else
 {
 buf.push(jade.escape(null == (jade_interp = h.formatDate(company.date_end)) ? "" : jade_interp));
 }
-buf.push("</div><div class=\"total right\">(" + (jade.escape((jade_interp = h.timeBetween(company.date_start, company.date_end)) == null ? '' : jade_interp)) + ")</div></div><div class=\"clear\"></div></div><div class=\"description\">" + (null == (jade_interp = h.markdown(company.description)) ? "" : jade_interp) + "</div>");
+buf.push("</div><div class=\"total right\">(" + (jade.escape((jade_interp = h.timeBetween(company.date_start, company.date_end)) == null ? '' : jade_interp)) + ")</div></div><div class=\"clear\"></div></div><div class=\"content\">" + (null == (jade_interp = h.markdown(company.description)) ? "" : jade_interp) + "</div></div>");
     }
 
   } else {
@@ -84,7 +84,7 @@ buf.push("</div><div class=\"total right\">(" + (jade.escape((jade_interp = h.ti
     for (var $index in $$obj) {
       $$l++;      var company = $$obj[$index];
 
-buf.push("<div class=\"header\"><div class=\"title left\">");
+buf.push("<div class=\"company\"><div class=\"header\"><div class=\"title left\">");
 if ( company.url)
 {
 buf.push("<a" + (jade.attr("href", company.url, true, false)) + " target=\"_blank\">" + (jade.escape(null == (jade_interp = company.name) ? "" : jade_interp)) + "</a>");
@@ -102,7 +102,7 @@ else
 {
 buf.push(jade.escape(null == (jade_interp = h.formatDate(company.date_end)) ? "" : jade_interp));
 }
-buf.push("</div><div class=\"total right\">(" + (jade.escape((jade_interp = h.timeBetween(company.date_start, company.date_end)) == null ? '' : jade_interp)) + ")</div></div><div class=\"clear\"></div></div><div class=\"description\">" + (null == (jade_interp = h.markdown(company.description)) ? "" : jade_interp) + "</div>");
+buf.push("</div><div class=\"total right\">(" + (jade.escape((jade_interp = h.timeBetween(company.date_start, company.date_end)) == null ? '' : jade_interp)) + ")</div></div><div class=\"clear\"></div></div><div class=\"content\">" + (null == (jade_interp = h.markdown(company.description)) ? "" : jade_interp) + "</div></div>");
     }
 
   }
@@ -135,7 +135,7 @@ var jade_interp;
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var skill = $$obj[$index];
 
-buf.push("<div class=\"header\"><div class=\"title\">" + (jade.escape(null == (jade_interp = skill.category) ? "" : jade_interp)) + "</div></div><div class=\"description\">" + (null == (jade_interp = h.markdown(skill.items)) ? "" : jade_interp) + "</div>");
+buf.push("<div class=\"skill\"><div class=\"header\"><div class=\"title\">" + (jade.escape(null == (jade_interp = skill.category) ? "" : jade_interp)) + "</div></div><div class=\"content\">" + (null == (jade_interp = h.markdown(skill.items)) ? "" : jade_interp) + "</div></div>");
     }
 
   } else {
@@ -143,7 +143,7 @@ buf.push("<div class=\"header\"><div class=\"title\">" + (jade.escape(null == (j
     for (var $index in $$obj) {
       $$l++;      var skill = $$obj[$index];
 
-buf.push("<div class=\"header\"><div class=\"title\">" + (jade.escape(null == (jade_interp = skill.category) ? "" : jade_interp)) + "</div></div><div class=\"description\">" + (null == (jade_interp = h.markdown(skill.items)) ? "" : jade_interp) + "</div>");
+buf.push("<div class=\"skill\"><div class=\"header\"><div class=\"title\">" + (jade.escape(null == (jade_interp = skill.category) ? "" : jade_interp)) + "</div></div><div class=\"content\">" + (null == (jade_interp = h.markdown(skill.items)) ? "" : jade_interp) + "</div></div>");
     }
 
   }
