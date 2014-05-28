@@ -1,4 +1,5 @@
 name: Sergey Varaksin
+location: San Francisco, CA
 position: Ruby on Rails Engineer
 email: varaksin86@gmail.com
 phone: +1 (312) 823-6093
@@ -6,7 +7,7 @@ github: http://github.com/svarks
 linkedin: http://www.linkedin.com/in/svarks
 
 summary: |
-  I have full stack web development experience from writing html and javascript on client side to setting up application deployment process and server administration.
+  I have a full stack web development experience from writing html and javascript on client side to setting up application deployment process and server administration.
 
   Simplicity is a key for me and I love ruby for that.
 
@@ -23,6 +24,8 @@ skills:
     items: |
       - **jQuery**
       - **Backbone.js**
+      - **Mocha + Chai**
+      - Node.js
       - D3.js
       - Angular.js
       - Prototype
@@ -46,6 +49,7 @@ skills:
       - **Vim**
       - **Git**
       - **Zsh + Tmux**
+      - **rbenv**
 
 companies:
   - name: Triggit Inc.
@@ -56,8 +60,8 @@ companies:
     description: |
       Worked on a rails app as a full stack engineer:
 
-      * Worked on refactoring monolithic rails app into rails API + Angular.js client on frontend
-      * Building cross-browser javascript widget using node.js
+      * Refactoring monolithic rails app into rails API + Angular.js client on frontend
+      * Building cross-browser javascript widget using Node.js (gulp, browserify, coffeescript)
 
   - name: Groupon Inc.
     url: http://www.groupon.com/
@@ -67,9 +71,9 @@ companies:
     description: |
       Internal web application for sales department.
 
-      * Backbone.js on frontend side
-      * Back end API that integrates with internal CRM
-      * ETL data processes
+      * Bulding responsive Backbone.js apps for desktop and mobile
+      * Rails API that acts as a proxy for Salesforce
+      * ETL data processes, geo search in Postgres
 
   - name: Sears Holdings Corporation
     url: http://www.searsholdings.com/
@@ -103,6 +107,8 @@ companies:
     description: |
       I had multiple rails contracts working as a full stack consultant.
 
+      Worked both in a team and as a solo developer providing full range of services from writing HTML and CSS to setting up monitoring on the server.
+
   - name: Sibers
     url: http://sibers.com/
     date_start: 08/01/2008
@@ -111,16 +117,16 @@ companies:
     description: |
       Worked on many projects using these technologies:
 
-        - Zend Framework, Symfony
-        - Mysql, Lucene
-        - JQuery, Dojo
+      - Zend Framework, Symfony
+      - Mysql, Lucene
+      - JQuery, Dojo
 
   - name: New Siberia LLC
     date_start: 09/01/2006
     date_end: 06/01/2008
     position: PHP Developer,<br/> Web Server Administrator
     description: |
-      - Implemented CRM system from scratch using PHP
+      - Implemented a custom made CRM using PHP
       - Web server administration
 
 education: |

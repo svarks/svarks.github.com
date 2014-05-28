@@ -1,8 +1,11 @@
 #header.clearfix
   .left
-    .name= data.name
-    .profession
+    p.name
+      = data.name
+    p.position
       = data.position
+    p.location
+      = data.location
   .details.right
     p.email
       a(href="mailto:#{data.email}")
@@ -33,4 +36,3 @@
     .header Education
     .content
       != h.markdown(data.education)
-#footer

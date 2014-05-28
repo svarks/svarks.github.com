@@ -24,28 +24,6 @@ body {
 #wrapper {
   padding: 0 20px;
 }
-#header {
-  padding-top: 10px;
-}
-#header .name {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-#header .profession {
-  font-size: 1.2em;
-}
-#header .details {
-  text-align: right;
-}
-#header .details .social a {
-  font-size: 32px;
-  margin-left: 10px;
-  float: right;
-}
-#footer {
-  height: 50px;
-}
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
@@ -84,7 +62,7 @@ a:hover {
   content: '\e002';
 }
 .block {
-  margin-top: 30px;
+  margin-bottom: 30px;
   padding-top: 30px;
   border-top: 3px dashed #ccc;
 }
@@ -105,6 +83,28 @@ a:hover {
 .block > .content {
   float: left;
   width: 660px;
+}
+#header {
+  padding: 20px 0;
+}
+#header .name {
+  font-size: 2em;
+  font-weight: bold;
+}
+#header .position {
+  font-size: 1.2em;
+}
+#header .location {
+  color: #666;
+  font-size: 0.9em;
+}
+#header .details {
+  text-align: right;
+}
+#header .details .social a {
+  font-size: 32px;
+  margin-left: 10px;
+  float: right;
 }
 #skills .skill {
   border: 1px solid #ddd;
