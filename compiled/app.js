@@ -6,18 +6,51 @@ MainView = require('./views/main');
 data = require('./data.yml');
 
 $(document).ready(function() {
-  var view;
+  var ga, view;
   $('title').html([data.name, data.position].join(' - '));
   view = new MainView({
     el: '#wrapper'
   });
-  return view.render(data);
+  view.render(data);
+  ga = require('./google-analytics');
+  ga('create', 'UA-52492818-1', 'auto');
+  return ga('send', 'pageview');
 });
 
 
-},{"./data.yml":2,"./views/main":7}],2:[function(require,module,exports){
+},{"./data.yml":2,"./google-analytics":3,"./views/main":8}],2:[function(require,module,exports){
 module.exports = {"name":"Sergey Varaksin","location":"San Francisco, CA","position":"Ruby on Rails Engineer","email":"varaksin86@gmail.com","phone":"+1 (312) 823-6093","github":"http://github.com/svarks","linkedin":"http://www.linkedin.com/in/svarks","summary":"\nI have a full stack web development experience from writing html and javascript on client side to setting up application deployment process and server administration.\n\nSimplicity is a key for me and I love ruby for that.\n","skills":[{"category":"Ruby","items":"\n- **Rails**\n- Sinatra\n- **RSpec**\n- Cucumber\n- **Haml / Sass / Coffescript**\n- **Sidekiq**\n"},{"category":"Javascript","items":"\n- **jQuery**\n- **Backbone.js**\n- **Mocha + Chai**\n- Node.js\n- D3.js\n- Angular.js\n- Prototype\n- Dojo\n- YUI\n- Mootools\n"},{"category":"Databases","items":"\n- **PostgreSQL**\n- **MongoDB**\n- **Redis**\n- MySQL\n"},{"category":"Deployment","items":"\n- **Capistrano**\n- **Nginx + Unicorn**\n- Puppet / Chef\n"},{"category":"Preferred Tools","items":"\n- **MacOSX**\n- **Vim**\n- **Git**\n- **Zsh + Tmux**\n- **rbenv**\n"}],"companies":[{"name":"Triggit Inc.","url":"http://www.triggit.com/","date_start":"12/2/2013","date_end":"04/11/2014","position":"Web Engineer","description":"\n\n* Refactoring monolithic rails app into rails API + Angular.js client on frontend\n* Building cross-browser javascript widget using Node.js (gulp, browserify, coffeescript)\n"},{"name":"Remind101 Inc.","url":"https://www.remind101.com/","date_start":"08/08/2013","date_end":"11/28/2013","position":"Web Engineer","description":"\nFull stack web engeneer:\n\n* Rails / Sinatra\n* PostgreSQL\n* Angular.js / Coffeescript\n* Worked on lots of performance optimisations\n"},{"name":"Groupon Inc.","url":"http://www.groupon.com/","date_start":"11/27/2012","date_end":"08/06/2013","position":"Ruby on Rails Consultant","description":"\nInternal web application for sales department.\n\n* Bulding responsive Backbone.js apps for desktop and mobile\n* Rails API that acts as a proxy for Salesforce\n* ETL data processes, geo search in Postgres\n"},{"name":"Sears Holdings Corporation","url":"http://www.searsholdings.com/","date_start":"02/01/2012","date_end":"11/26/2012","position":"Ruby on Rails Consultant","description":"\n<http://kenmoreconnect.com/>\n\n* I had taken a lead developer role on new project providing post-purchase experience for retail store customers.\n* Rich client interface that fully degrades to iPhone screen.\n* Large data import and processing.\n"},{"name":"Sphere Consulting Inc.","url":"http://sphereinc.com/","date_start":"04/01/2011","date_end":"02/01/2012","position":"Ruby on Rails Developer","description":"\nWorked as consultant on many projects, doing the following:\n\n* backend and frontend development\n* code refactoring and optimisation\n* production environment setup\n* data migrations\n"},{"name":"Freelance","date_start":"03/01/2009","date_end":"04/01/2011","position":"Ruby on Rails Developer","description":"\nI had multiple rails contracts working as a full stack consultant.\n\nWorked both in a team and as a solo developer providing full range of services from writing HTML and CSS to setting up monitoring on the server.\n"},{"name":"Sibers","url":"http://sibers.com/","date_start":"08/01/2008","date_end":"03/01/2009","position":"PHP Developer","description":"\nWorked on many projects using these technologies:\n\n- Zend Framework, Symfony\n- Mysql, Lucene\n- JQuery, Dojo\n"},{"name":"New Siberia LLC","date_start":"09/01/2006","date_end":"06/01/2008","position":"PHP Developer,<br/> Web Server Administrator","description":"\n- Implemented a custom made CRM using PHP\n- Web server administration\n"}],"education":"\nNSAWT, Novosibirsk, Russia\n\nMS, Computer Science\n\n2003 - 2008\n"}
 },{}],3:[function(require,module,exports){
+var namespace, script;
+
+namespace = 'ga';
+
+window['GoogleAnalyticsObject'] = namespace;
+
+if (window[namespace] == null) {
+  window[namespace] = function() {
+    var _base;
+    if ((_base = window[namespace]).q == null) {
+      _base.q = [];
+    }
+    return window[namespace].q.push(arguments);
+  };
+}
+
+window[namespace].l = 1 * new Date();
+
+script = document.createElement('script');
+
+script.async = 1;
+
+script.src = '//www.google-analytics.com/analytics.js';
+
+$('head').append(script);
+
+module.exports = window[namespace];
+
+
+},{}],4:[function(require,module,exports){
 var dateFormats;
 
 dateFormats = ['MM/DD/YYYY', 'YYYY-MM-DD'];
@@ -42,7 +75,7 @@ module.exports = {
 };
 
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -109,7 +142,7 @@ buf.push("</div><div class=\"total right\">(" + (jade.escape((jade_interp = h.ti
 }).call(this);
 }("companies" in locals_for_with?locals_for_with.companies:typeof companies!=="undefined"?companies:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined));;return buf.join("");
 };
-},{"jade/runtime":8}],5:[function(require,module,exports){
+},{"jade/runtime":9}],6:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -119,7 +152,7 @@ var jade_interp;
 ;var locals_for_with = (locals || {});(function (data, h) {
 buf.push("<div id=\"header\" class=\"clearfix\"><div class=\"left\"><p class=\"name\">" + (jade.escape(null == (jade_interp = data.name) ? "" : jade_interp)) + "</p><p class=\"position\">" + (jade.escape(null == (jade_interp = data.position) ? "" : jade_interp)) + "</p><p class=\"location\">" + (jade.escape(null == (jade_interp = data.location) ? "" : jade_interp)) + "</p></div><div class=\"details right\"><p class=\"email\"><a" + (jade.attr("href", "mailto:" + (data.email) + "", true, false)) + ">" + (jade.escape(null == (jade_interp = data.email) ? "" : jade_interp)) + "</a></p><p class=\"phone\"><phone>" + (jade.escape(null == (jade_interp = data.phone) ? "" : jade_interp)) + "</phone></p><p class=\"social\"><a target=\"_blank\"" + (jade.attr("href", data.linkedin, true, false)) + " title=\"Linkedin\"><span class=\"icon icon-linkedin\"></span></a><a target=\"_blank\"" + (jade.attr("href", data.github, true, false)) + " title=\"Github\"><span class=\"icon icon-github\"></span></a></p></div></div><div id=\"content\"><div class=\"block\"><div class=\"header\">Summary</div><div class=\"content\">" + (null == (jade_interp = h.markdown(data.summary)) ? "" : jade_interp) + "</div></div><div id=\"skills\" class=\"block\"><div class=\"header\">Skills</div><div class=\"content\"></div></div><div id=\"companies\" class=\"block\"><div class=\"header\">Work Experience</div><div class=\"content\"></div></div><div class=\"block\"><div class=\"header\">Education</div><div class=\"content\">" + (null == (jade_interp = h.markdown(data.education)) ? "" : jade_interp) + "</div></div></div>");}("data" in locals_for_with?locals_for_with.data:typeof data!=="undefined"?data:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined));;return buf.join("");
 };
-},{"jade/runtime":8}],6:[function(require,module,exports){
+},{"jade/runtime":9}],7:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -150,7 +183,7 @@ buf.push("<div class=\"skill\"><div class=\"header\"><div class=\"title\">" + (j
 }).call(this);
 }("skills" in locals_for_with?locals_for_with.skills:typeof skills!=="undefined"?skills:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined));;return buf.join("");
 };
-},{"jade/runtime":8}],7:[function(require,module,exports){
+},{"jade/runtime":9}],8:[function(require,module,exports){
 var Helpers, MainView,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
@@ -201,7 +234,7 @@ MainView = (function(_super) {
 module.exports = MainView;
 
 
-},{"../helpers":3,"../templates/companies":4,"../templates/main":5,"../templates/skills":6}],8:[function(require,module,exports){
+},{"../helpers":4,"../templates/companies":5,"../templates/main":6,"../templates/skills":7}],9:[function(require,module,exports){
 (function (global){
 !function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.jade=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 'use strict';

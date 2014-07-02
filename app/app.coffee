@@ -6,3 +6,7 @@ $(document).ready ->
 
   view = new MainView(el: '#wrapper')
   view.render(data)
+
+  ga = require('./google-analytics')
+  ga('create', 'UA-52492818-1', 'auto')
+  ga('send', 'pageview')
