@@ -1,12 +1,14 @@
 gulp    = require 'gulp'
 connect = require 'gulp-connect'
+path    = require 'path'
 
 require './build'
 
 gulp.task 'connect', ->
   connect.server(
-    root: '.'
+    root: path.join(__dirname, '..')
     livereload: true
+    port: 5000
   )
 
 gulp.task 'watch', ->
