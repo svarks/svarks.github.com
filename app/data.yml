@@ -7,19 +7,30 @@ github: http://github.com/svarks
 linkedin: http://www.linkedin.com/in/svarks
 
 summary: |
-  I have a full stack web development experience from writing html and javascript on client side to setting up application deployment process and server administration.
+  Web application development has been my passion for quite some time now.
+  I consider myself a full stack engineer, being equally good at building backend systems or writing javascript and css on the client side.
+  I think it allows me to get things done quickly and move fast.
+  I also enjoy TDD and pair programming.
 
-  Simplicity is a key for me and I love ruby for that.
+  I always felt important to pay attention to details and keep things clean and simple.
+  And I love ruby for that.
 
 skills:
+  - category: Development Processes
+    items: |
+      - Agile
+      - TDD / BDD
+      - Pair programming
   - category: Ruby
     items: |
       - **Rails**
       - Sinatra
       - **RSpec**
-      - Cucumber
+      - Minitest
+      - Capybara
       - **Haml / Sass / Coffescript**
       - **Sidekiq**
+      - Rails API / Grape
   - category: Javascript
     items: |
       - **jQuery**
@@ -52,6 +63,18 @@ skills:
       - **rbenv**
 
 companies:
+  - name: beRecruited Inc.
+    url: http://new.berecruited.com/
+    date_start: 4/7/2014
+    date_end: Today
+    position: Web Engineer
+    description: |
+      Full stack engineer:
+
+      * Ruby on Rails
+      * Javascript
+      * MySQL
+
   - name: Triggit Inc.
     url: http://www.triggit.com/
     date_start: 08/08/2013

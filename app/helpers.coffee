@@ -6,8 +6,13 @@ module.exports =
 
   timeBetween: (start, end) ->
     start = moment(start, dateFormats)
-    end = new Date if end == 'Today'
-    moment(end, dateFormats).from(start, true)
+    end =
+      if end == 'Today'
+        moment()
+      else
+        moment(end, dateFormats)
+
+    end.from(start, true)
 
   formatDate: (date, format = 'MMM YYYY') ->
     moment(date, dateFormats).format(format)
