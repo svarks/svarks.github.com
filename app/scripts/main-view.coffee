@@ -1,4 +1,4 @@
-Helpers = require '../helpers'
+Helpers = require './helpers'
 
 class MainView extends Backbone.View
   templates:

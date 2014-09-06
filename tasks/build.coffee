@@ -25,7 +25,7 @@ gulp.task 'icons', ->
     .pipe(gulp.dest('compiled'))
 
 gulp.task 'scripts:app', ->
-  gulp.src('app/app.coffee', read: false)
+  gulp.src('app/scripts/app.coffee', read: false)
     .pipe(browserify(
       transform: ['coffeeify', 'jadeify', 'browserify-data']
       extensions: ['.coffee', '.jade']
