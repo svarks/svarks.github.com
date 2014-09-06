@@ -1,12 +1,12 @@
 #header.clearfix
-  .left
+  .details
     p.name
       = data.name
     p.position
       = data.position
     p.location
       = data.location
-  .details.right
+  .contact
     p.email
       a(href="mailto:#{data.email}")
         = data.email
@@ -15,6 +15,7 @@
     p.social
       a(target="_blank" href=data.linkedin title="Linkedin")
         span.icon.icon-linkedin
+      &nbsp;
       a(target="_blank" href=data.github title="Github")
         span.icon.icon-github
 

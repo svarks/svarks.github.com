@@ -4,36 +4,39 @@
 @import 'includes/typography'
 @import 'icons'
 
+#header
+  margin-bottom: 20px
+  .name
+    font-size: 32px
+    font-weight: bold
+  .location
+    color: #aaa
+  .social
+    font-size: 32px
+
+  @media (min-width: 500px)
+    .details
+      float: left
+    .contact
+      text-align: right
+
 .block
   margin-bottom: 30px
   padding-top: 30px
   border-top: 3px dashed #ccc
   clearfix()
+
   > .header
     font-size: 1.2em
     font-weight: bold
-    width: 200px
-    float: left
-  > .content
-    float: left
-    width: $content-width - 200px
+    margin-bottom: 20px
 
-#header
-  padding: 20px 0
-  .name
-    font-size: 2em
-    font-weight: bold
-  .position
-    font-size: 1.2em
-  .location
-    color: #666
-    font-size: 0.9em
-  .details
-    text-align: right
-    .social a
-      font-size: 32px
-      margin-left: 10px
-      float: right
+  @media (min-width: 900px)
+    > .header
+      width: 200px
+      float: left
+    > .content
+      margin-left: 200px
 
 #skills
   .skill

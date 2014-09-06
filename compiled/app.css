@@ -16,13 +16,19 @@
   height: 0;
 }
 body {
-  width: 900px;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
 #wrapper {
-  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+@media (min-width: 900px) {
+  #wrapper {
+    padding: 20px 50px;
+  }
 }
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -61,6 +67,27 @@ a:hover {
 .icon.icon-linkedin:before {
   content: '\e002';
 }
+#header {
+  margin-bottom: 20px;
+}
+#header .name {
+  font-size: 32px;
+  font-weight: bold;
+}
+#header .location {
+  color: #aaa;
+}
+#header .social {
+  font-size: 32px;
+}
+@media (min-width: 500px) {
+  #header .details {
+    float: left;
+  }
+  #header .contact {
+    text-align: right;
+  }
+}
 .block {
   margin-bottom: 30px;
   padding-top: 30px;
@@ -77,34 +104,16 @@ a:hover {
 .block > .header {
   font-size: 1.2em;
   font-weight: bold;
-  width: 200px;
-  float: left;
+  margin-bottom: 20px;
 }
-.block > .content {
-  float: left;
-  width: 660px;
-}
-#header {
-  padding: 20px 0;
-}
-#header .name {
-  font-size: 2em;
-  font-weight: bold;
-}
-#header .position {
-  font-size: 1.2em;
-}
-#header .location {
-  color: #666;
-  font-size: 0.9em;
-}
-#header .details {
-  text-align: right;
-}
-#header .details .social a {
-  font-size: 32px;
-  margin-left: 10px;
-  float: right;
+@media (min-width: 900px) {
+  .block > .header {
+    width: 200px;
+    float: left;
+  }
+  .block > .content {
+    margin-left: 200px;
+  }
 }
 #skills .skill {
   border: 1px solid #ddd;
