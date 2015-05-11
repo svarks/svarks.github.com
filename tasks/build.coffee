@@ -1,10 +1,11 @@
 gulp       = require 'gulp'
-rename     = require 'gulp-rename'
 concat     = require 'gulp-concat'
 stylus     = require 'gulp-stylus'
 jade       = require 'gulp-jade'
-browserify = require 'gulp-browserify'
 iconfont   = require 'gulp-iconfont'
+browserify = require 'browserify'
+source     = require 'vinyl-source-stream'
+buffer     = require 'vinyl-buffer'
 
 gulp.task 'templates', ->
   gulp.src('app/index.jade')
@@ -25,12 +26,19 @@ gulp.task 'icons', ->
     .pipe(gulp.dest('compiled'))
 
 gulp.task 'scripts:app', ->
-  gulp.src('app/scripts/app.coffee', read: false)
-    .pipe(browserify(
-      transform: ['coffeeify', 'jadeify', 'browserify-data']
-      extensions: ['.coffee', '.jade']
-    ))
-    .pipe(rename(extname: '.js'))
+  b = browserify(
+    entries: 'app/scripts/app.coffee'
+    transform: [
+      require('coffeeify')
+      require('jadeify')
+      require('browserify-data')
+    ]
+    extensions: ['.coffee', '.jade']
+  )
+
+  b.bundle()
+    .pipe(source('app.js'))
+    .pipe(buffer())
     .pipe(gulp.dest('compiled'))
 
 gulp.task 'scripts:vendor', ->
