@@ -26,6 +26,7 @@ $(document).ready(function() {
 });
 
 
+
 },{"../data.yml":1,"./ga.js":3,"./main-view":5}],3:[function(require,module,exports){
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,15 +56,16 @@ module.exports = {
 };
 
 
+
 },{}],5:[function(require,module,exports){
 var Helpers, MainView,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
 Helpers = require('./helpers');
 
-MainView = (function(_super) {
-  __extends(MainView, _super);
+MainView = (function(superClass) {
+  extend(MainView, superClass);
 
   function MainView() {
     return MainView.__super__.constructor.apply(this, arguments);
@@ -106,6 +108,7 @@ MainView = (function(_super) {
 module.exports = MainView;
 
 
+
 },{"../templates/companies":6,"../templates/main":7,"../templates/skills":8,"./helpers":4}],6:[function(require,module,exports){
 var jade = require("jade/runtime");
 
@@ -113,7 +116,7 @@ module.exports = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (companies, h) {
+;var locals_for_with = (locals || {});(function (companies, h, undefined) {
 // iterate companies
 ;(function(){
   var $$obj = companies;
@@ -171,9 +174,9 @@ buf.push("</div><div class=\"total right\">(" + (jade.escape((jade_interp = h.ti
 
   }
 }).call(this);
-}("companies" in locals_for_with?locals_for_with.companies:typeof companies!=="undefined"?companies:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined));;return buf.join("");
+}.call(this,"companies" in locals_for_with?locals_for_with.companies:typeof companies!=="undefined"?companies:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
 };
-},{"jade/runtime":9}],7:[function(require,module,exports){
+},{"jade/runtime":10}],7:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -181,16 +184,16 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 ;var locals_for_with = (locals || {});(function (data, h) {
-buf.push("<div id=\"header\" class=\"clearfix\"><div class=\"details\"><p class=\"name\">" + (jade.escape(null == (jade_interp = data.name) ? "" : jade_interp)) + "</p><p class=\"position\">" + (jade.escape(null == (jade_interp = data.position) ? "" : jade_interp)) + "</p><p class=\"location\">" + (jade.escape(null == (jade_interp = data.location) ? "" : jade_interp)) + "</p></div><div class=\"contact\"><p class=\"email\"><a" + (jade.attr("href", "mailto:" + (data.email) + "", true, false)) + ">" + (jade.escape(null == (jade_interp = data.email) ? "" : jade_interp)) + "</a></p><p class=\"phone\">" + (jade.escape(null == (jade_interp = data.phone) ? "" : jade_interp)) + "</p><p class=\"social\"><a target=\"_blank\"" + (jade.attr("href", data.linkedin, true, false)) + " title=\"Linkedin\"><span class=\"icon icon-linkedin\"></span></a>&nbsp;<a target=\"_blank\"" + (jade.attr("href", data.github, true, false)) + " title=\"Github\"><span class=\"icon icon-github\"></span></a></p></div></div><div id=\"content\"><div class=\"block\"><div class=\"header\">Summary</div><div class=\"content\">" + (null == (jade_interp = h.markdown(data.summary)) ? "" : jade_interp) + "</div></div><div id=\"skills\" class=\"block\"><div class=\"header\">Skills</div><div class=\"content\"></div></div><div id=\"companies\" class=\"block\"><div class=\"header\">Work Experience</div><div class=\"content\"></div></div><div class=\"block\"><div class=\"header\">Education</div><div class=\"content\">" + (null == (jade_interp = h.markdown(data.education)) ? "" : jade_interp) + "</div></div></div>");}("data" in locals_for_with?locals_for_with.data:typeof data!=="undefined"?data:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined));;return buf.join("");
+buf.push("<div id=\"header\" class=\"clearfix\"><div class=\"details\"><p class=\"name\">" + (jade.escape(null == (jade_interp = data.name) ? "" : jade_interp)) + "</p><p class=\"position\">" + (jade.escape(null == (jade_interp = data.position) ? "" : jade_interp)) + "</p><p class=\"location\">" + (jade.escape(null == (jade_interp = data.location) ? "" : jade_interp)) + "</p></div><div class=\"contact\"><p class=\"email\"><a" + (jade.attr("href", "mailto:" + (data.email) + "", true, false)) + ">" + (jade.escape(null == (jade_interp = data.email) ? "" : jade_interp)) + "</a></p><p class=\"phone\">" + (jade.escape(null == (jade_interp = data.phone) ? "" : jade_interp)) + "</p><p class=\"social\"><a target=\"_blank\"" + (jade.attr("href", data.linkedin, true, false)) + " title=\"Linkedin\"><span class=\"icon icon-linkedin\"></span></a>&nbsp;<a target=\"_blank\"" + (jade.attr("href", data.github, true, false)) + " title=\"Github\"><span class=\"icon icon-github\"></span></a></p></div></div><div id=\"content\"><div class=\"block\"><div class=\"header\">Summary</div><div class=\"content\">" + (null == (jade_interp = h.markdown(data.summary)) ? "" : jade_interp) + "</div></div><div id=\"skills\" class=\"block\"><div class=\"header\">Skills</div><div class=\"content\"></div></div><div id=\"companies\" class=\"block\"><div class=\"header\">Work Experience</div><div class=\"content\"></div></div><div class=\"block\"><div class=\"header\">Education</div><div class=\"content\">" + (null == (jade_interp = h.markdown(data.education)) ? "" : jade_interp) + "</div></div></div>");}.call(this,"data" in locals_for_with?locals_for_with.data:typeof data!=="undefined"?data:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined));;return buf.join("");
 };
-},{"jade/runtime":9}],8:[function(require,module,exports){
+},{"jade/runtime":10}],8:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (skills, h) {
+;var locals_for_with = (locals || {});(function (h, skills, undefined) {
 // iterate skills
 ;(function(){
   var $$obj = skills;
@@ -212,11 +215,13 @@ buf.push("<div class=\"skill\"><div class=\"header\"><div class=\"title\">" + (j
 
   }
 }).call(this);
-}("skills" in locals_for_with?locals_for_with.skills:typeof skills!=="undefined"?skills:undefined,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined));;return buf.join("");
+}.call(this,"h" in locals_for_with?locals_for_with.h:typeof h!=="undefined"?h:undefined,"skills" in locals_for_with?locals_for_with.skills:typeof skills!=="undefined"?skills:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
 };
-},{"jade/runtime":9}],9:[function(require,module,exports){
+},{"jade/runtime":10}],9:[function(require,module,exports){
+
+},{}],10:[function(require,module,exports){
 (function (global){
-!function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.jade=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.jade=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
 /**
@@ -279,7 +284,9 @@ function nulls(val) {
  */
 exports.joinClasses = joinClasses;
 function joinClasses(val) {
-  return Array.isArray(val) ? val.map(joinClasses).filter(nulls).join(' ') : val;
+  return (Array.isArray(val) ? val.map(joinClasses) :
+    (val && typeof val === 'object') ? Object.keys(val).filter(function (key) { return val[key]; }) :
+    [val]).filter(nulls).join(' ');
 }
 
 /**
@@ -306,6 +313,16 @@ exports.cls = function cls(classes, escaped) {
   }
 };
 
+
+exports.style = function (val) {
+  if (val && typeof val === 'object') {
+    return Object.keys(val).map(function (style) {
+      return style + ':' + val[style];
+    }).join(';');
+  } else {
+    return val;
+  }
+};
 /**
  * Render the given attribute.
  *
@@ -316,6 +333,9 @@ exports.cls = function cls(classes, escaped) {
  * @return {String}
  */
 exports.attr = function attr(key, val, escaped, terse) {
+  if (key === 'style') {
+    val = exports.style(val);
+  }
   if ('boolean' == typeof val || null == val) {
     if (val) {
       return ' ' + (terse ? key : key + '="' + key + '"');
@@ -323,10 +343,24 @@ exports.attr = function attr(key, val, escaped, terse) {
       return '';
     }
   } else if (0 == key.indexOf('data') && 'string' != typeof val) {
+    if (JSON.stringify(val).indexOf('&') !== -1) {
+      console.warn('Since Jade 2.0.0, ampersands (`&`) in data attributes ' +
+                   'will be escaped to `&amp;`');
+    };
+    if (val && typeof val.toISOString === 'function') {
+      console.warn('Jade will eliminate the double quotes around dates in ' +
+                   'ISO form after 2.0.0');
+    }
     return ' ' + key + "='" + JSON.stringify(val).replace(/'/g, '&apos;') + "'";
   } else if (escaped) {
+    if (val && typeof val.toISOString === 'function') {
+      console.warn('Jade will stringify dates in ISO form after 2.0.0');
+    }
     return ' ' + key + '="' + exports.escape(val) + '"';
   } else {
+    if (val && typeof val.toISOString === 'function') {
+      console.warn('Jade will stringify dates in ISO form after 2.0.0');
+    }
     return ' ' + key + '="' + val + '"';
   }
 };
@@ -396,7 +430,7 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
     throw err;
   }
   try {
-    str = str || _dereq_('fs').readFileSync(filename, 'utf8')
+    str = str || require('fs').readFileSync(filename, 'utf8')
   } catch (ex) {
     rethrow(err, null, lineno)
   }
@@ -421,10 +455,9 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
   throw err;
 };
 
-},{"fs":2}],2:[function(_dereq_,module,exports){
+},{"fs":2}],2:[function(require,module,exports){
 
-},{}]},{},[1])
-(1)
+},{}]},{},[1])(1)
 });
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[2])
+},{"fs":9}]},{},[2])
