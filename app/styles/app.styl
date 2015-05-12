@@ -1,75 +1,100 @@
 @import 'includes/mixins'
-@import 'includes/support'
 @import 'includes/layout'
 @import 'includes/typography'
 @import 'icons'
 
-#header
+.page-header
   margin-bottom: 20px
+
   .name
     font-size: 32px
     font-weight: bold
+
   .location
     color: #aaa
+
   .social
     font-size: 32px
 
   @media (min-width: 500px)
     .details
       float: left
+
     .contact
       text-align: right
 
-.block
-  margin-bottom: 30px
-  padding-top: 30px
-  border-top: 3px dashed #ccc
-  clearfix()
+.page-content
+  .block
+    margin-bottom: 30px
+    padding-top: 30px
+    border-top: 3px dashed #ccc
+    clearfix()
 
-  > .header
-    font-size: 1.2em
-    font-weight: bold
-    margin-bottom: 20px
-
-  @media (min-width: 900px)
     > .header
-      width: 200px
-      float: left
-    > .content
-      margin-left: 200px
+      font-size: 1.2em
+      font-weight: bold
+      margin-bottom: 20px
 
-#skills
-  .skill
-    panel()
-    ul
-      clearfix()
-      list-style: none
-      padding: 0
-      margin: -5px 0
-      li
+    @media (min-width: 900px)
+      > .header
+        width: 200px
         float: left
-        border: 1px solid #9ad
-        padding: 0 15px
-        line-height: 28px
-        margin: 5px 0
-        margin-right: 10px
-        border-radius(14px)
 
-#companies
-  .company
-    panel()
-    .header
-      line-height: 1.5em
-      .title
-        width: 250px
-      .position
-        color: #333
-        font-size: 0.8em
-        font-weight: bold
-      .period
-        font-size: 0.7em
-        .total
+      > .content
+        margin-left: 200px
+
+  .skills
+    .skill
+      panel()
+
+      ul
+        clearfix()
+        list-style: none
+        padding: 0
+        margin: -5px 0
+
+        li
+          float: left
+          border: 1px solid #9ad
+          border-radius: 14px
+          padding: 0 15px
+          line-height: 28px
+          margin: 5px 0
           margin-right: 10px
-          color: #aaa
-    .content ul
-      custom-list()
+
+  .companies
+    .company
+      panel()
+
+      .header
+        line-height: 1.5em
+        clearfix()
+
+        @media(min-width: 320px)
+          .position
+            float: left
+
+          .time-range
+            float: right
+
+        @media(min-width: 640px)
+          .title
+            float: left
+
+        .title
+          min-width: 220px
+
+        .position
+          color: #333
+          font-size: 0.8em
+          font-weight: bold
+
+        .time-range
+          font-size: 0.7em
+
+          .period
+            color: #aaa
+            margin-right: 10px
+
+      .content ul
+        custom-list()

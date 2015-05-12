@@ -28,7 +28,6 @@ skills:
       - **RSpec**
       - Minitest
       - Capybara
-      - **Haml / Sass / Coffescript**
       - **Sidekiq**
       - Rails API / Grape
   - category: Javascript
@@ -37,6 +36,7 @@ skills:
       - **Backbone.js**
       - **React.js**
       - **Mocha + Chai**
+      - **ES6 (Babel)**
       - Node.js
       - D3.js
       - Angular.js
@@ -77,7 +77,7 @@ companies:
       * React.js / Backbone
       * Postgres
 
-  - name: beRecruited Inc.
+  - name: BeRecruited Inc.
     url: http://new.berecruited.com/
     date_start: 4/7/2014
     date_end: 8/14/2015
