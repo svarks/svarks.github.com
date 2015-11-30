@@ -64,10 +64,23 @@ skills:
       - **rbenv**
 
 companies:
+  - name: Experiment Inc.
+    url: https://experiment.com/
+    date_start: 8/19/2015
+    date_end: Today
+    position: Web Engineer
+    description: |
+      Worked on a Rails app as a full stack engineer.
+      Introduced Ract.js as a replacement for legacy Backbone code.
+
+      * Rails
+      * React.js / Backbone
+      * Postgres
+
   - name: beRecruited Inc.
     url: http://new.berecruited.com/
     date_start: 4/7/2014
-    date_end: Today
+    date_end: 8/14/2015
     position: Web Engineer
     description: |
       Full stack engineer:

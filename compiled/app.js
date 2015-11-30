@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-module.exports = {"name":"Sergey Varaksin","location":"San Francisco, CA","position":"Ruby on Rails Engineer","email":"varaksin86@gmail.com","phone":"+1 (312) 823-6093","github":"http://github.com/svarks","linkedin":"http://www.linkedin.com/in/svarks","summary":"Web application development has been my passion for about 10 years.\nI am a full stack engineer, being equally good at building backend systems or writing javascript and css on the client side.\nI also enjoy TDD and pair programming.\n\nI always felt that it is important to pay attention to details and keep things clean and simple.\nAnd I love ruby for that.\n","skills":[{"category":"Development Processes","items":"- Agile\n- TDD / BDD\n- Pair programming\n- OOP / Functional programming\n"},{"category":"Ruby","items":"- **Rails**\n- Sinatra\n- **RSpec**\n- Minitest\n- Capybara\n- **Haml / Sass / Coffescript**\n- **Sidekiq**\n- Rails API / Grape\n"},{"category":"Javascript","items":"- **jQuery**\n- **Backbone.js**\n- **React.js**\n- **Mocha + Chai**\n- Node.js\n- D3.js\n- Angular.js\n- Prototype\n- Dojo\n- YUI\n- Mootools\n"},{"category":"Databases","items":"- **PostgreSQL**\n- **MongoDB**\n- **Redis**\n- MySQL\n"},{"category":"Deployment","items":"- **Capistrano**\n- **Nginx + Unicorn**\n- Puppet / Chef\n"},{"category":"Preferred Tools","items":"- **MacOSX**\n- **Vim**\n- **Git**\n- **Zsh + Tmux**\n- **rbenv**\n"}],"companies":[{"name":"beRecruited Inc.","url":"http://new.berecruited.com/","date_start":"4/7/2014","date_end":"Today","position":"Web Engineer","description":"Full stack engineer:\n\n* Ruby on Rails\n* Javascript\n* MySQL\n"},{"name":"Triggit Inc.","url":"http://www.triggit.com/","date_start":"12/2/2013","date_end":"04/11/2014","position":"Web Engineer","description":"\n* Refactoring monolithic rails app into rails API + Angular.js client on frontend\n* Building cross-browser javascript widget using Node.js (gulp, browserify, coffeescript)\n"},{"name":"Remind101 Inc.","url":"https://www.remind101.com/","date_start":"08/08/2013","date_end":"11/28/2013","position":"Web Engineer","description":"Full stack web engeneer:\n\n* Rails / Sinatra\n* PostgreSQL\n* Angular.js / Coffeescript\n* Worked on lots of performance optimisations\n"},{"name":"Groupon Inc.","url":"http://www.groupon.com/","date_start":"11/27/2012","date_end":"08/06/2013","position":"Ruby on Rails Consultant","description":"Internal web application for sales department.\n\n* Bulding responsive Backbone.js apps for desktop and mobile\n* Rails API that acts as a proxy for Salesforce\n* ETL data processes, geo search in Postgres\n"},{"name":"Sears Holdings Corporation","url":"http://www.searsholdings.com/","date_start":"02/01/2012","date_end":"11/26/2012","position":"Ruby on Rails Consultant","description":"<http://kenmoreconnect.com/>\n\n* I had taken a lead developer role on new project providing post-purchase experience for retail store customers.\n* Rich client interface that fully degrades to iPhone screen.\n* Large data import and processing.\n"},{"name":"Sphere Consulting Inc.","url":"http://sphereinc.com/","date_start":"04/01/2011","date_end":"02/01/2012","position":"Ruby on Rails Developer","description":"Worked as consultant on many projects, doing the following:\n\n* backend and frontend development\n* code refactoring and optimisation\n* production environment setup\n* data migrations\n"},{"name":"Freelance","date_start":"03/01/2009","date_end":"04/01/2011","position":"Ruby on Rails Developer","description":"I had multiple rails contracts working as a full stack consultant.\n\nWorked both in a team and as a solo developer providing full range of services from writing HTML and CSS to setting up monitoring on the server.\n"},{"name":"Sibers","url":"http://sibers.com/","date_start":"08/01/2008","date_end":"03/01/2009","position":"PHP Developer","description":"Worked on many projects using these technologies:\n\n- Zend Framework, Symfony\n- Mysql, Lucene\n- JQuery, Dojo\n"},{"name":"New Siberia LLC","date_start":"09/01/2006","date_end":"06/01/2008","position":"PHP Developer,<br/> Web Server Administrator","description":"- Implemented a custom made CRM using PHP\n- Web server administration\n"}],"education":"NSAWT, Novosibirsk, Russia\n\nMS, Computer Science\n\n2003 - 2008\n"}
+module.exports = {"name":"Sergey Varaksin","location":"San Francisco, CA","position":"Ruby on Rails Engineer","email":"varaksin86@gmail.com","phone":"+1 (312) 823-6093","github":"http://github.com/svarks","linkedin":"http://www.linkedin.com/in/svarks","summary":"Web application development has been my passion for about 10 years.\nI am a full stack engineer, being equally good at building backend systems or writing javascript and css on the client side.\nI also enjoy TDD and pair programming.\n\nI always felt that it is important to pay attention to details and keep things clean and simple.\nAnd I love ruby for that.\n","skills":[{"category":"Development Processes","items":"- Agile\n- TDD / BDD\n- Pair programming\n- OOP / Functional programming\n"},{"category":"Ruby","items":"- **Rails**\n- Sinatra\n- **RSpec**\n- Minitest\n- Capybara\n- **Haml / Sass / Coffescript**\n- **Sidekiq**\n- Rails API / Grape\n"},{"category":"Javascript","items":"- **jQuery**\n- **Backbone.js**\n- **React.js**\n- **Mocha + Chai**\n- Node.js\n- D3.js\n- Angular.js\n- Prototype\n- Dojo\n- YUI\n- Mootools\n"},{"category":"Databases","items":"- **PostgreSQL**\n- **MongoDB**\n- **Redis**\n- MySQL\n"},{"category":"Deployment","items":"- **Capistrano**\n- **Nginx + Unicorn**\n- Puppet / Chef\n"},{"category":"Preferred Tools","items":"- **MacOSX**\n- **Vim**\n- **Git**\n- **Zsh + Tmux**\n- **rbenv**\n"}],"companies":[{"name":"Experiment Inc.","url":"https://experiment.com/","date_start":"8/19/2015","date_end":"Today","position":"Web Engineer","description":"Worked on a Rails app as a full stack engineer.\nIntroduced Ract.js as a replacement for legacy Backbone code.\n\n* Rails\n* React.js / Backbone\n* Postgres\n"},{"name":"beRecruited Inc.","url":"http://new.berecruited.com/","date_start":"4/7/2014","date_end":"8/14/2015","position":"Web Engineer","description":"Full stack engineer:\n\n* Ruby on Rails\n* Javascript\n* MySQL\n"},{"name":"Triggit Inc.","url":"http://www.triggit.com/","date_start":"12/2/2013","date_end":"04/11/2014","position":"Web Engineer","description":"\n* Refactoring monolithic rails app into rails API + Angular.js client on frontend\n* Building cross-browser javascript widget using Node.js (gulp, browserify, coffeescript)\n"},{"name":"Remind101 Inc.","url":"https://www.remind101.com/","date_start":"08/08/2013","date_end":"11/28/2013","position":"Web Engineer","description":"Full stack web engeneer:\n\n* Rails / Sinatra\n* PostgreSQL\n* Angular.js / Coffeescript\n* Worked on lots of performance optimisations\n"},{"name":"Groupon Inc.","url":"http://www.groupon.com/","date_start":"11/27/2012","date_end":"08/06/2013","position":"Ruby on Rails Consultant","description":"Internal web application for sales department.\n\n* Bulding responsive Backbone.js apps for desktop and mobile\n* Rails API that acts as a proxy for Salesforce\n* ETL data processes, geo search in Postgres\n"},{"name":"Sears Holdings Corporation","url":"http://www.searsholdings.com/","date_start":"02/01/2012","date_end":"11/26/2012","position":"Ruby on Rails Consultant","description":"<http://kenmoreconnect.com/>\n\n* I had taken a lead developer role on new project providing post-purchase experience for retail store customers.\n* Rich client interface that fully degrades to iPhone screen.\n* Large data import and processing.\n"},{"name":"Sphere Consulting Inc.","url":"http://sphereinc.com/","date_start":"04/01/2011","date_end":"02/01/2012","position":"Ruby on Rails Developer","description":"Worked as consultant on many projects, doing the following:\n\n* backend and frontend development\n* code refactoring and optimisation\n* production environment setup\n* data migrations\n"},{"name":"Freelance","date_start":"03/01/2009","date_end":"04/01/2011","position":"Ruby on Rails Developer","description":"I had multiple rails contracts working as a full stack consultant.\n\nWorked both in a team and as a solo developer providing full range of services from writing HTML and CSS to setting up monitoring on the server.\n"},{"name":"Sibers","url":"http://sibers.com/","date_start":"08/01/2008","date_end":"03/01/2009","position":"PHP Developer","description":"Worked on many projects using these technologies:\n\n- Zend Framework, Symfony\n- Mysql, Lucene\n- JQuery, Dojo\n"},{"name":"New Siberia LLC","date_start":"09/01/2006","date_end":"06/01/2008","position":"PHP Developer,<br/> Web Server Administrator","description":"- Implemented a custom made CRM using PHP\n- Web server administration\n"}],"education":"NSAWT, Novosibirsk, Russia\n\nMS, Computer Science\n\n2003 - 2008\n"}
 },{}],2:[function(require,module,exports){
 var MainView, data;
 
@@ -134,7 +134,7 @@ else
 {
 buf.push(jade.escape(null == (jade_interp = company.name) ? "" : jade_interp));
 }
-buf.push("</div><div class=\"position left\">" + (null == (jade_interp = company.position) ? "" : jade_interp) + "</div><div class=\"period right\"><div class=\"dates right\">" + (jade.escape(null == (jade_interp = h.formatDate(company.date_start)) ? "" : jade_interp)) + " - ");
+buf.push("</div><div class=\"position left\">" + (null == (jade_interp = company.position) ? "" : jade_interp) + "</div><div class=\"period right\"><div class=\"dates right\">" + (jade.escape(null == (jade_interp = h.formatDate(company.date_start)) ? "" : jade_interp)) + (jade.escape(null == (jade_interp = ' - ') ? "" : jade_interp)));
 if ( company.date_end == 'Today')
 {
 buf.push("Today");
@@ -160,7 +160,7 @@ else
 {
 buf.push(jade.escape(null == (jade_interp = company.name) ? "" : jade_interp));
 }
-buf.push("</div><div class=\"position left\">" + (null == (jade_interp = company.position) ? "" : jade_interp) + "</div><div class=\"period right\"><div class=\"dates right\">" + (jade.escape(null == (jade_interp = h.formatDate(company.date_start)) ? "" : jade_interp)) + " - ");
+buf.push("</div><div class=\"position left\">" + (null == (jade_interp = company.position) ? "" : jade_interp) + "</div><div class=\"period right\"><div class=\"dates right\">" + (jade.escape(null == (jade_interp = h.formatDate(company.date_start)) ? "" : jade_interp)) + (jade.escape(null == (jade_interp = ' - ') ? "" : jade_interp)));
 if ( company.date_end == 'Today')
 {
 buf.push("Today");
@@ -221,7 +221,7 @@ buf.push("<div class=\"skill\"><div class=\"header\"><div class=\"title\">" + (j
 
 },{}],10:[function(require,module,exports){
 (function (global){
-!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.jade=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.jade = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
 /**
@@ -403,12 +403,21 @@ exports.attrs = function attrs(obj, terse){
  * @api private
  */
 
-exports.escape = function escape(html){
-  var result = String(html)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+var jade_encode_html_rules = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;'
+};
+var jade_match_html = /[&<>"]/g;
+
+function jade_encode_char(c) {
+  return jade_encode_html_rules[c] || c;
+}
+
+exports.escape = jade_escape;
+function jade_escape(html){
+  var result = String(html).replace(jade_match_html, jade_encode_char);
   if (result === '' + html) return html;
   else return result;
 };
@@ -454,6 +463,11 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
     + '\n' + context + '\n\n' + err.message;
   throw err;
 };
+
+exports.DebugItem = function DebugItem(lineno, filename) {
+  this.lineno = lineno;
+  this.filename = filename;
+}
 
 },{"fs":2}],2:[function(require,module,exports){
 
