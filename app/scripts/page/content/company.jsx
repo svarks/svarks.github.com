@@ -13,7 +13,22 @@ const Company = React.createClass({
         end = moment(end, dateFormats);
       }
 
-      return end.from(start, true);
+      const pluralize = function(number, word) {
+        return `${number} ${word}${number > 1 ? 's' : ''}`
+      };
+
+      const months = end.diff(start, 'month');
+      const years = Math.floor(months / 12);
+
+      const result = [];
+
+      if (years > 0) {
+        result.push(pluralize(years, 'year'));
+      }
+
+      result.push(pluralize(months % 12, 'month'));
+
+      return result.join(' and ');
     };
 
     const formatDate = function(date) {
@@ -28,15 +43,15 @@ const Company = React.createClass({
       <div className="company">
         <div className="header">
           <div className="time-range">
-            <span className="period">
+            <div className="period">
               ({ timeBetween(data.date_start, data.date_end) })
-            </span>
+            </div>
 
-            <span className="dates">
+            <div className="dates">
               { formatDate(data.date_start) }
               &nbsp; - &nbsp;
               { formatDate(data.date_end) }
-            </span>
+            </div>
           </div>
 
           <div className="title">

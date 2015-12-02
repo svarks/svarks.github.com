@@ -171,6 +171,13 @@ a:hover {
   .page-content .companies .company .header .title {
     float: left;
   }
+  .page-content .companies .company .header .period,
+  .page-content .companies .company .header .dates {
+    display: inline-block;
+  }
+  .page-content .companies .company .header .period {
+    margin-right: 10px;
+  }
 }
 .page-content .companies .company .header .title {
   min-width: 220px;
@@ -182,10 +189,10 @@ a:hover {
 }
 .page-content .companies .company .header .time-range {
   font-size: 0.7em;
+  text-align: right;
 }
 .page-content .companies .company .header .time-range .period {
   color: #aaa;
-  margin-right: 10px;
 }
 .page-content .companies .company .content ul {
   list-style: none;

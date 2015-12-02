@@ -150,7 +150,22 @@ var Company = React.createClass({
         end = moment(end, dateFormats);
       }
 
-      return end.from(start, true);
+      var pluralize = function pluralize(number, word) {
+        return number + ' ' + word + (number > 1 ? 's' : '');
+      };
+
+      var months = end.diff(start, 'month');
+      var years = Math.floor(months / 12);
+
+      var result = [];
+
+      if (years > 0) {
+        result.push(pluralize(years, 'year'));
+      }
+
+      result.push(pluralize(months % 12, 'month'));
+
+      return result.join(' and ');
     };
 
     var formatDate = function formatDate(date) {
@@ -171,14 +186,14 @@ var Company = React.createClass({
           'div',
           { className: 'time-range' },
           React.createElement(
-            'span',
+            'div',
             { className: 'period' },
             '(',
             timeBetween(data.date_start, data.date_end),
             ')'
           ),
           React.createElement(
-            'span',
+            'div',
             { className: 'dates' },
             formatDate(data.date_start),
             '  -  ',
